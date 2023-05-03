@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cadastro de Cliente</title>
+	<link rel="stylesheet" href="stile.css">
+</head>
+<body>
+	<h1>Cadastro de Cliente</h1>
+
+	<form>
+		<label for="nome">Nome *</label>
+		<input type="text" id="nome" name="nome" required>
+
+		<label for="cpf">CPF</label>
+		<input type="text" id="cpf" name="cpf" onkeyup="this.value=this.value.replace(/[^\d]/,'')">
+
+		<label for="profissao">Profissão</label>
+		<input type="text" id="profissao" name="profissao">
+
+		<label for="endereco">Endereço</label>
+		<input type="text" id="endereco" name="endereco">
+
+		<button type="button" id="btn-cadastrar">Cadastrar</button>
+	</form>
+
+	<h2>Buscar Cliente</h2>
+	<form>
+		<label for="id">ID do Cliente</label>
+		<input type="text" id="id" name="id">
+		<button type="button" id="btn-buscar">Buscar</button>
+	</form>
+
+	<div id="resultado"></div>
+
+	<script src="script.js"></script>
+</body>
+</html>
